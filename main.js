@@ -25,6 +25,15 @@ function playRound() {
     if (humanChoice === computerChoice) {
         return "Its a draw!"
     } 
-    // if we dont add another return statement this only returns when true
+     else if (
+        (humanChoice === "rock" && computerChoice === "scissors") ||
+        (humanChoice === "paper" && computerChoice === "rock") ||
+        (humanChoice === "scissors" && computerChoice === "paper")
+    ) {
+        return "You win!";
+    } else {
+        return "You lose!";
+    }
+    //if we dont add another return statement this only returns when true
 }
 console.log(playRound());
