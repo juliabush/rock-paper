@@ -11,8 +11,20 @@ function getComputerChoice() {
         return "Scissors";
     }
 }
-console.log(getComputerChoice());
 
 function getHumanChoice() {
-    
+    let humanInput = window.prompt();
+    return (humanInput);
 }
+// getHumanChoice();
+
+function playRound() {
+    let humanChoice = getHumanChoice();
+    let computerChoice = getComputerChoice();
+
+    if (humanChoice === computerChoice) {
+        return "Its a draw!"
+    } 
+    // if we dont add another return statement this only returns when true
+}
+console.log(playRound());
