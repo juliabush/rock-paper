@@ -40,3 +40,12 @@ function playRound() {
     //if we dont add another return statement this only returns when true
 }
 console.log(playRound());
+
+function playGame() {
+    for (let i = 1; i < 5; i++) {
+        console.log(playRound());
+        console.log(humanScore)
+        console.log(computerScore)
+    }
+}
+playGame();
