@@ -4,19 +4,18 @@ let humanScore = 0;
 function getComputerChoice() {
     let randomNumber = Math.floor(Math.random() * 3);
     if (randomNumber === 2) {
-        return "Rock";
+        return "rock";
     } else if (randomNumber === 1) {
-        return "Paper";
+        return "paper";
     } else {
-        return "Scissors";
+        return "scissors";
     }
 }
 
 function getHumanChoice() {
     let humanInput = window.prompt();
-    return (humanInput);
+    return humanInput.toLowerCase();
 }
-// getHumanChoice();
 
 function playRound() {
     let humanChoice = getHumanChoice();
@@ -30,9 +29,13 @@ function playRound() {
         (humanChoice === "paper" && computerChoice === "rock") ||
         (humanChoice === "scissors" && computerChoice === "paper")
     ) {
+        console.log(++humanScore)
         return "You win!";
+        
     } else {
+        console.log(++computerScore)
         return "You lose!";
+        
     }
     //if we dont add another return statement this only returns when true
 }
